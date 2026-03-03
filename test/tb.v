@@ -74,7 +74,7 @@ initial begin
   #10;
 
   $display("A=19 B=12 ADD Result=%d", uo_out[4:0]);
-  assert (uo_out[4:0] == 5'b11111) else $error("FAIL")
+  assert (uo_out[4:0] == 5'b11111) else $error("FAIL");
   //     $display("PASS");
   // else
   //     $display("FAIL");
