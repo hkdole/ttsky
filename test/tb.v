@@ -88,10 +88,10 @@ initial begin
   #10;
 
   $display("A=31 B=1 ADD Result=%d", uo_out[4:0]);
-  if (uo_out[4:0] == 5'd0)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b00000) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
   // ---------------- Testing subtraction ----------------
@@ -103,10 +103,10 @@ initial begin
   #10;
 
   $display("A=19 B=12 SUB Result=%d", uo_out[4:0]);
-  if (uo_out[4:0] == 5'd7)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b00111) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
     //Overflow subtraction
@@ -117,10 +117,10 @@ initial begin
   #10;
 
   $display("A=31 B=1 SUB Result=%d", uo_out[4:0]);
-  if (uo_out[4:0] == 5'd31)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b11111) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
   // ---------------- Testing and'ing ----------------
@@ -131,10 +131,10 @@ initial begin
   #10;
 
   $display("A=11111 B=01010 AND Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b01010)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b01010) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
   // ---------------- Testing or'ing ----------------
@@ -145,10 +145,10 @@ initial begin
   #10;
 
   $display("A=00000 B=01010 OR Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b01010)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b01010) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
   // ---------------- Testing xor'ing ----------------
@@ -159,10 +159,10 @@ initial begin
   #10;
 
   $display("A=10001 B=11011 OR Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b01010)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b01010) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
   // ---------------- Testing not'ing ----------------
@@ -173,10 +173,10 @@ initial begin
   #10;
 
   $display("A=10001 B=11111 NOT Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b01110)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b01110) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
   // ---------------- Testing shift left ----------------
@@ -188,10 +188,10 @@ initial begin
   #10;
 
   $display("A=00101 B=00001 SHIFT LEFT Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b01010)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b01010) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
     //Big shift
@@ -202,10 +202,10 @@ initial begin
   #10;
 
   $display("A=00101 B=11111 SHIFT LEFT Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b00000)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b00000) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
   // ---------------- Testing shift right ----------------
@@ -217,10 +217,10 @@ initial begin
   #10;
 
   $display("A=00101 B=00001 SHIFT RIGHT Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b00010)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b00010) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
     //Big shift
@@ -231,10 +231,10 @@ initial begin
   #10;
 
   $display("A=00101 B=11111 SHIFT RIGHT Result=%b", uo_out[4:0]);
-  if (uo_out[4:0] == 5'b00000)
-      $display("PASS");
-  else
-      $display("FAIL");
+  assert (uo_out[4:0] == 5'b00000) else $error("FAIL");
+  //     $display("PASS");
+  // else
+  //     $display("FAIL");
 
   #10;
 end

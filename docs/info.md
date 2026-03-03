@@ -20,12 +20,16 @@ ALU that supports the following operations:
 * Shift right
 
 Op codes are three bits and in order of presented (e.g. ADD is 000)
-The system supports 5 bit numbers with overflow. 
+The system supports 5 bit numbers and will perform operations on them according to the opcode (with the exception of the NOT operation).
 
 ## How to test
 
-Explain how to use your project
+Testing occurs by comparing the resultant to known answers to the formula. If they are equivalent, the test is successful. It also tests against overflows to see if they correctly do so.
 
 ## External hardware
 
 No external hardware is used
+
+## Use of generative AI
+
+Use of genAI is constrained to explanations. My skills with verilog is from CSE 100 and needed concepts explained to me such as regs (as opposed to FDRE DFF's from Xilinx) and how one could make test benches. None of the code is written by AI.
