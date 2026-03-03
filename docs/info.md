@@ -9,7 +9,18 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+ALU that supports the following operations:
+* ADD
+* SUB
+* AND
+* OR
+* XOR
+* NOT
+* Shift left
+* Shift right
+
+Op codes are three bits and in order of presented (e.g. ADD is 000)
+The system supports 5 bit numbers with overflow. 
 
 ## How to test
 
@@ -17,4 +28,4 @@ Explain how to use your project
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+No external hardware is used
